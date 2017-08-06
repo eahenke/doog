@@ -1,0 +1,17 @@
+{
+    "name": "AccessToken",
+    "properties":
+    {
+        "ttl":
+        {
+            "type": "number",
+            "required": true,
+            "default": 1209600
+        },
+        "userId":
+        {
+            "type": "string",
+            "required": true
+        }
+    }
+}

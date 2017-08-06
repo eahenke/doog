@@ -1,0 +1,23 @@
+{
+    "name": "User",
+    "properties":
+    {
+        "username":
+        {
+            "type": "string",
+            "required": true,
+            "unique": true
+        },
+        "password":
+        {
+            "type": "string",
+            "required": true,
+            "hidden": true
+        },
+        "admin":
+        {
+            "type": "boolean",
+            "default": false
+        }
+    }
+}

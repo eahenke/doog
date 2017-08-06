@@ -1,0 +1,9 @@
+{
+    "name": "BaseModel",
+    "properties":
+    {
+        "id": "string",
+        "created": "date",
+        "modified": "date"
+    }
+}

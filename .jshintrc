@@ -1,0 +1,18 @@
+{
+    "esversion": 6,
+    "expr": true,
+    "loopfunc": true,
+    "eqeqeq": true,
+    "latedef": false,
+    "undef": true,
+    "globals":
+    {
+        "module": false,
+        "console": false,
+        "global": false,
+        "app": false,
+        "process": false,
+        "require": false
+    },
+    "mocha": true
+}
