@@ -1,7 +1,7 @@
 const expect = require('chai').expect;
 const models = require('../../lib/config/models');
 const User = require('../../lib/models/User');
-const request = require('../utils').request;
+const request = require('../test-utils').request;
 
 const henk = require('../../index');
 const rest = require('../../lib/setup/rest');

@@ -2,7 +2,7 @@ const henk = require('../../index');
 const rest = require('../../lib/setup/rest');
 const MongooseAdapter = require('../../lib/adapters/mongoose-adapter');
 const buildModels = require('../../lib/setup/model-builder');
-const request = require('../utils').request;
+const request = require('../test-utils').request;
 
 const appOptions = {
     manualSetup: true,

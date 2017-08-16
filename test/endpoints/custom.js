@@ -4,7 +4,7 @@ const setupModels = require('../../lib/setup/setup-models');
 const buildModels = require('../../lib/setup/model-builder');
 const MongooseAdapter = require('../../lib/adapters/mongoose-adapter');
 
-const request = require('../utils').request;
+const request = require('../test-utils').request;
 
 const appOptions = {
     manualSetup: true,
