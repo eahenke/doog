@@ -1,4 +1,4 @@
-const henk = require('../../index');
+const doog = require('../../index');
 const rest = require('../../lib/setup/rest');
 const buildModels = require('../../lib/setup/model-builder');
 const MongooseAdapter = require('../../lib/adapters/mongoose-adapter');
@@ -151,12 +151,12 @@ describe('Operation hooks', () =>
 
 function appBoot(modelConfig)
 {
-    let app = henk(appOptions);
+    let app = doog(appOptions);
 
     app.adapter = new MongooseAdapter(
     {
         host: 'localhost',
-        database: 'henk-test'
+        database: 'doog-test'
     });
     app.adapter.addConnection();
     app.modelDefinitions = {

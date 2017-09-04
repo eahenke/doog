@@ -1,4 +1,4 @@
-const henk = require('../../index');
+const doog = require('../../index');
 
 const defaultModels = require('../../lib/config/models');
 const customModels = require('./config/models');
@@ -12,7 +12,7 @@ describe('App.setup() Suite', () =>
     let app;
     before(done =>
     {
-        app = henk(__dirname);
+        app = doog(__dirname);
         done();
     });
 

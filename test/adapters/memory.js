@@ -1,4 +1,4 @@
-const henk = require('../../index');
+const doog = require('../../index');
 const rest = require('../../lib/setup/rest');
 const buildModels = require('../../lib/setup/model-builder');
 const MemoryAdapter = require('../../lib/adapters/memory-adapter');
@@ -639,7 +639,7 @@ describe('Crud Test Suite', () =>
 
 function appBoot(modelConfig)
 {
-    const app = henk(appOptions);
+    const app = doog(appOptions);
 
     app.adapter = new MemoryAdapter();
     app.adapter.addConnection();

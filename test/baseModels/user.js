@@ -3,7 +3,7 @@ const models = require('../../lib/config/models');
 const User = require('../../lib/models/User');
 const request = require('../test-utils').request;
 
-const henk = require('../../index');
+const doog = require('../../index');
 const rest = require('../../lib/setup/rest');
 const MongooseAdapter = require('../../lib/adapters/mongoose-adapter');
 
@@ -26,11 +26,11 @@ describe('User Model Tests', () =>
 
     before(done =>
     {
-        app = henk(appOptions);
+        app = doog(appOptions);
         app.adapter = new MongooseAdapter(
         {
             host: 'localhost',
-            database: 'henk-test'
+            database: 'doog-test'
         });
         app.adapter.addConnection();
 
