@@ -53,6 +53,38 @@ module.exports = function (projectRoot, options)
         else app.use(errorLogger, clientErrorHandler);
     };
 
+
+    //Export non-hidden models and properties
+    app.exportData = function ()
+    {
+        if (!app.models || !Object.keys(app.models).length) return Promise.resolve(
+        {});
+
+        const dbProms = [];
+        for (let modelName in app.models)
+        {
+            const model = app.models[modelName];
+            if (!model || !model.modelDefinition) continue;
+            if (model.modelDefinition.export === false) continue;
+
+            const prom = app.models[modelName].rest('find').then(data =>
+            {
+                return {
+                    [modelName]: data
+                };
+            });
+            dbProms.push(prom);
+        }
+        return Promise.all(dbProms).then(res =>
+        {
+            return res.reduce((obj, data) =>
+            {
+                return Object.assign(obj, data);
+            },
+            {});
+        });
+    }
+
     if (!options.manualSetup) setup(app, options);
 
     return app;
