@@ -7,7 +7,6 @@ const bodyParser = require('body-parser');
 
 const setupModels = require('./lib/setup/setup-models');
 const buildModels = require('./lib/setup/model-builder');
-const defaultModels = require('./lib/config/models');
 const setup = require('./lib/setup/setup');
 
 const getType = require('./lib/utils/get-type');
