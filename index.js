@@ -32,6 +32,7 @@ module.exports = function (projectRoot, options)
     options = options || defaultOptions;
 
     const app = express();
+    app.static = express.static;
     app.modulePath = path.resolve(__dirname);
     app.projectRoot = projectRoot;
     app.disable('x-powered-by');
